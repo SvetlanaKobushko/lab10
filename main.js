@@ -11,44 +11,27 @@ let quiz1 = 36;
 
 //Step 2. Calculating the sums of each lab scores using loops
 
-let sum1 = 0;
-for (let i = 0; i < lab1.length; i++){
-	sum1 += lab1[i];
+function sum(array) {
+	let S = 0;
+	for (let i = 0; i<array.length; i++){
+		S=S+array[i];
+	}
+	return S;
 }
 
-let sum2 = 0;
-for (let i = 0; i < lab2.length; i++){
-	sum2 += lab2[i];
-}
+let S1 = sum(lab1);
+let S2 = sum(lab2);
+let S3 = sum(lab3);
+let S4 = sum(lab4);
+let S5 = sum(lab5);
+let S6 = sum(lab6);
+let S8 = sum(lab8);
 
-let sum3 = 0;
-for (let i = 0; i < lab3.length; i++){
-	sum3 += lab3[i];
-}
+console.log(S1, S2, S3, S4, S5, S6, S8);
 
-let sum4 = 0;
-for (let i = 0; i < lab4.length; i++){
-	sum4 += lab4[i];
-}
 
-let sum5 = 0;
-for (let i = 0; i < lab5.length; i++){
-	sum5 += lab5[i];
-}
+let labs_array = [S1, S2, S3, S4, S5, S6, S8]; //creating an array to use inside the function
 
-let sum6 = 0;
-for (let i = 0; i < lab6.length; i++){
-	sum6 += lab6[i];
-}
-
-let sum8 = 0;
-for (let i = 0; i < lab8.length; i++){
-	sum8 += lab8[i];
-}
-
-console.log(sum1, sum2, sum3, sum4, sum5, sum6, sum8); //checking
-
-let labs_array = [sum1, sum2, sum3, sum4, sum5, sum6, sum8]; //creating an array to use inside the function
 
 //Step 3. Calculating the sum of the sums of lab scores
 var labs_sums = function (labs_array){
